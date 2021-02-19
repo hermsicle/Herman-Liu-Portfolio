@@ -335,6 +335,15 @@ Sets the background to NONE on the middle line
 }
 
 /*  About Container */
+#about {
+    /* border: 2px solid pink; */
+    /* height: 150px; */
+}
+@media (min-width: 800px) {
+    #about {
+        height: 150px;
+    }
+}
 .about-container {
     /* border: 2px solid #fff; */
     /* height: 100vh; */
@@ -434,6 +443,14 @@ Sets the background to NONE on the middle line
 }
 
 /* Projects Container */
+#projects {
+    /* border: 2px solid pink; */
+}
+@media (min-width: 800px) {
+    #projects {
+        height: 80px;
+    }
+}
 .projects-container {
     padding: 2em;
     /* margin-top: 100px; */
@@ -665,6 +682,7 @@ Sets the background to NONE on the middle line
 }
 .credit .designed {
     font-size: 1rem;
+    color: var(--secondary-color);
 }
 .credit .inspiration {
     font-size: 0.8rem;
