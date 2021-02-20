@@ -40,8 +40,13 @@ header {
 header img {
     height: 100%;
     /* border: 2px solid pink; */
-    width: 75px;
-    margin-left: 1rem;
+    width: 150px;
+    /* margin-left: 1rem; */
+    transform: scale(1);
+    transition: 0.35s ease-in-out;
+}
+header img:hover {
+    transform: scale(1.1);
 }
 .menu-btn {
     position: relative;
@@ -263,12 +268,13 @@ Sets the background to NONE on the middle line
 }
 .hero-container-inner {
     /* border: 3px solid #fff; */
-    max-width: 800px;
+    max-width: 850px;
     height: 80%;
     margin: 2rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     padding: 1.5rem;
 }
 .hero-container h3 {
@@ -291,6 +297,7 @@ Sets the background to NONE on the middle line
 .hero-container p {
     color: var(--light-font);
     /* border: 1px solid white; */
+    max-width: 600px;
     line-height: 1.5;
     letter-spacing: 1px;
     padding-top: 1rem;
@@ -324,14 +331,14 @@ Sets the background to NONE on the middle line
 }
 
 @media (min-width: 800px) {
-    .hero-container {
-        /* height: 80vh; */
-    }
-    .hero-container-inner {
-        width: 70%;
-    }
     .hero-container .name {
         font-size: 5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero-container-inner {
+        padding-left: 100px;
     }
 }
 
@@ -352,7 +359,7 @@ Sets the background to NONE on the middle line
 }
 .about-container-inner {
     /* border: 2px solid #fff; */
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto;
     /* padding-left: 0.5rem; */
 }
