@@ -2,14 +2,24 @@ const menuBtn = document.querySelector('.menu-btn')
 const xBtn = document.querySelector('.x-btn')
 const mySideNav = document.getElementById('mySideNav')
 const header = document.querySelector('.header')
-let menuOpen = false;
+let menuOpen = false
+let img = document.querySelector('.image')
+let flipImg = false
+
+img.addEventListener('click' , () => {
+    if(!flipImg) {
+        img.src = './assets/images/image2.JPG'
+        flipImg = true
+    } else {
+        img.src = './assets/images/image.JPG'
+        flipImg = false
+    }
+})
 
 /*
 Grab all the containers from DOM 
 */
 const containers = document.querySelectorAll('.container')
-console.log(containers)
-
 
 menuBtn.addEventListener('click', () => {
     menuOpen = true;
