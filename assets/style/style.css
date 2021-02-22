@@ -247,6 +247,9 @@ Sets the background to NONE on the middle line
     .mainNav {
         display: flex;
     }
+    .header {
+        filter: none;
+    }
 }
 
 /* Hero Container */

@@ -35,6 +35,22 @@ Grab all the containers from DOM
 */
 const containers = document.querySelectorAll('.container')
 
+//Variable to check whether or not media query matches. Boolean Value
+let mediaQuery = window.matchMedia('(min-width: 800px)')
+
+function handleSideNavChange(e) {
+    if(e.matches) {
+        console.log('media query matched')
+        mySideNav.style.width = '0'
+        containers.forEach(container => container.style.filter = 'none')
+        header.style.filter = 'none'
+        menuOpen = false;
+    }
+}
+mediaQuery.addListener(handleSideNavChange)
+handleSideNavChange(mediaQuery)
+
+
 menuBtn.addEventListener('click', () => {
     menuOpen = true;
     mySideNav.style.width = '60%'
@@ -42,10 +58,15 @@ menuBtn.addEventListener('click', () => {
     header.style.filter = 'blur(3px)'
 })
 
+
+
+
+
 xBtn.addEventListener('click' , () => {
     mySideNav.style.width = '0'
     containers.forEach(container => container.style.filter = 'none')
     header.style.filter = 'none'
+    menuOpen = false;
 })
 
 containers.forEach(container => {
