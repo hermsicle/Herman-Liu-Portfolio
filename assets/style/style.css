@@ -457,6 +457,7 @@ Sets the background to NONE on the middle line
     }
     .img-container {
         grid-area: image;
+        margin-top: 120px;
     }
 }
 
