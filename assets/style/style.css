@@ -349,7 +349,7 @@ Sets the background to NONE on the middle line
     color: var(--secondary-color);
     color: var(--light-font);
     letter-spacing: 1px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 .about-container-inner p span {
     color: var(--contrast-color);
@@ -363,6 +363,8 @@ Sets the background to NONE on the middle line
     padding: 0.5rem 0;
     color: var(--light-font);
     font-family: var(--secondary-font);
+    font-size: 1.05rem;
+    letter-spacing: 1px;
 }
 .about-container-inner ul li i {
     color: var(--contrast-color);
@@ -410,6 +412,7 @@ Sets the background to NONE on the middle line
 .speech-bubble {
     font-family: var(--secondary-font);
     letter-spacing: 1px;
+    font-size: 1.05rem;
 }
 .speech-bubble:before {
     content: '';
