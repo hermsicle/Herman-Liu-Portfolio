@@ -35,10 +35,11 @@ Grab all the containers from DOM
 */
 const containers = document.querySelectorAll('.container')
 
-//Variable to check whether or not media query matches. Boolean Value
+//Variable to check whether or not media query matches.
 let mediaQuery = window.matchMedia('(min-width: 800px)')
 
 function handleSideNavChange(e) {
+    //if mediaQuery.matches is TRUE then... reset
     if(e.matches) {
         console.log('media query matched')
         mySideNav.style.width = '0'
@@ -57,10 +58,6 @@ menuBtn.addEventListener('click', () => {
     containers.forEach(container => container.style.filter = 'blur(3px)')
     header.style.filter = 'blur(3px)'
 })
-
-
-
-
 
 xBtn.addEventListener('click' , () => {
     mySideNav.style.width = '0'
