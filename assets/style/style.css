@@ -35,17 +35,30 @@ header {
     top: 0; 
     z-index: 1;
     transition: all 0.35s;
+    border-bottom: 0.5px solid #ccd6f663;
+}
+header a {
+    align-self: center;
 }
 header img {
     height: 100%;
-    width: 220px;
+    width: 200px;
     transform: scale(1);
     transition: 0.35s ease-in-out;
     margin-right: 1rem;
     margin-left: 0.5rem;
+    padding: 0.5rem;
 }
 header img:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 375px) {
+    header img {
+        margin: 0;
+        height: 80%;
+        width: 180px;
+    }
 }
 .menu-btn {
     position: relative;
@@ -459,8 +472,16 @@ Sets the background to NONE on the middle line
     bottom: -13px;
 }
 
+@media (max-width: 375px) {
+    .img-container {
+        margin-left: 1rem;
+    }
+}
+
 @media (min-width: 820px) {
     .about-container-inner {
+        /* border: 2px solid pink; */
+        padding-top: 5%;
         display: grid;
         grid-template: 50px 1fr 1fr / 400px 1fr ;
         grid-template-areas : 
@@ -484,12 +505,6 @@ Sets the background to NONE on the middle line
     }
 }
 
-/* Projects Container */
-@media (min-width: 800px) {
-    #projects {
-        height: 80px;
-    }
-}
 .projects-container {
     padding: 2em;
 }
@@ -566,6 +581,7 @@ Sets the background to NONE on the middle line
 
 @media (min-width: 630px) {
     .projects-container-inner {
+        padding-top: 5%;
         display: grid;
         grid-template: 75px 1fr / 1fr 1fr;
         grid-template-areas: 

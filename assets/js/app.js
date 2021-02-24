@@ -41,7 +41,6 @@ let mediaQuery = window.matchMedia('(min-width: 800px)')
 function handleSideNavChange(e) {
     //if mediaQuery.matches is TRUE then... reset
     if(e.matches) {
-        console.log('media query matched')
         mySideNav.style.width = '0'
         containers.forEach(container => container.style.filter = 'none')
         header.style.filter = 'none'
@@ -74,7 +73,7 @@ containers.forEach(container => {
     })
 })
 
-// When user scrolls down, hide the navbar, When scroll up, show the navbar
+//When user scrolls down, hide the navbar, When scroll up, show the navbar
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 let currentScrollPos = window.pageYOffset;
@@ -85,3 +84,14 @@ let currentScrollPos = window.pageYOffset;
     }
     prevScrollpos = currentScrollPos;
 }
+
+
+window.addEventListener('scroll' , (e) => {
+    const sections = document.getElementsByClassName('container')
+
+    for(let i = 0; i < sections.length; i++) {
+        console.log(sections[i].id)
+
+    }
+    // console.log(window.location.href)
+})
