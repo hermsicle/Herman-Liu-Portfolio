@@ -54,7 +54,7 @@ handleSideNavChange(mediaQuery)
 
 menuBtn.addEventListener('click', () => {
     menuOpen = true;
-    mySideNav.style.width = '60%'
+    mySideNav.style.width = '70%'
     containers.forEach(container => container.style.filter = 'blur(3px)')
     header.style.filter = 'blur(3px)'
 })
