@@ -4,6 +4,7 @@
     --light-font: #8892b0;
     --contrast-color: #64ffda;
     --project-bg:  #112240;
+    --box-shadow: 3px 3px 5px rgb(1, 1, 32);
     --main-font: 'Noto Sans', sans-serif;
     --secondary-font: 'Share Tech', sans-serif;
 }
@@ -119,7 +120,6 @@ header img:hover {
     transform: translateY(10px);
 }
 
-
 /* ANIMATION */
 /* 
 Horizontal Menu -50px 
@@ -139,7 +139,6 @@ Sets the background to NONE on the middle line
 
 /* SideNav x Button */
 .x-btn {
-    /* border: 2px solid pink; */
     display: flex;
     height: 35px;
     width: 35px;
@@ -165,11 +164,9 @@ Sets the background to NONE on the middle line
     position: absolute;
 }
 .x-btn-inner::before {
-    /* transform: rotate(45deg) translate(35px, -35px); */
     transform: rotate(45deg) 
 }
 .x-btn-inner::after {
-    /* transform: rotate(-45deg) translate(35px, 35px); */
     transform: rotate(-45deg) 
 }
 
@@ -249,7 +246,6 @@ Sets the background to NONE on the middle line
     transition: all 0.35s ease-in-out;
     transform: scale(1);
     letter-spacing: 1px;
-    /* font-family: var(--secondary-font); */
 }
 .mainNav a:hover {
     color: var(--contrast-color);
@@ -292,7 +288,6 @@ Sets the background to NONE on the middle line
     height: 90vh;
 }
 .hero-container-inner {
-    border: 2px solid pink;
     max-width: 900px;
     height: 80%;
     margin: 0 auto;
@@ -374,13 +369,13 @@ Sets the background to NONE on the middle line
     padding: 2rem;
 }
 .about-container-inner {
-    border: 2px solid pink;
     max-width: 900px;
     margin: 0 auto;
 }
 .about-container-inner h3 {
     color: var(--secondary-color);
     font-size: 2.5rem;
+    letter-spacing: 1px;
 }
 .about-container-inner p {
     margin-top: 2rem;
@@ -499,12 +494,10 @@ Sets the background to NONE on the middle line
     .about-container-inner h3 {
         grid-area: header;
         font-size: 3rem;
-        border: 1px solid pink;
         align-self: center;
     }
     .info-container {
         grid-area: sidebar;
-        border: 1px solid pink;
     }
     .skills-list {
         grid-area: sidebar2;
@@ -523,12 +516,12 @@ Sets the background to NONE on the middle line
 .skills-container-inner {
     max-width: 900px;
     margin: 0 auto;
-    border: 2px solid pink;
 }
 .skills-header {
     color: var(--secondary-color);
     text-align: center;
     font-size: 2rem;
+    letter-spacing: 1px;
 }
 .skills-card {
     /* border: 2px solid pink; */
@@ -536,6 +529,11 @@ Sets the background to NONE on the middle line
     width: 100%;
     margin: 1rem auto;
     display: flex;
+    box-shadow: var(--box-shadow);
+    transition: all 0.25s ease-in-out;
+}
+.skills-card:hover {
+    transform: translateY(-5px);
 }
 .skills-card-top-1 {
     width: 40%;
@@ -603,10 +601,14 @@ Sets the background to NONE on the middle line
         display: flex;
         justify-content: space-between;
     }
+    .skills-header {
+        font-size: 2.3rem;
+    }
     .skills-card {
         width: 30%;
         height: 450px;
         flex-direction: column;
+        /* box-shadow: 3px 3px 5px rgb(5, 5, 43); */
     }
     .skills-card-top-1,
     .skills-card-top-2,
@@ -625,6 +627,12 @@ Sets the background to NONE on the middle line
     }
     .skills-card-bottom p {
         margin-top: 1rem;
+    }
+}
+
+@media (min-width: 965px) {
+    .skills-header {
+        font-size: 3rem;
     }
 }
 
@@ -649,7 +657,6 @@ Sets the background to NONE on the middle line
     padding: 2em;
 }
 .projects-container-inner {
-    border: 2px solid pink;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -658,6 +665,7 @@ Sets the background to NONE on the middle line
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
+    letter-spacing: 1px;
 }
 .project {
     margin: 1rem auto;
@@ -667,6 +675,7 @@ Sets the background to NONE on the middle line
     display: flex;
     flex-direction: column;
     position: relative;
+    box-shadow: var(--box-shadow);
 }
 .project:hover {
     transform: translateY(-5px);
