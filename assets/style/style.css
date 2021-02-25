@@ -578,7 +578,7 @@ Sets the background to NONE on the middle line
     background-color:var(--project-bg);
 }
 .skills-card-bottom h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     align-self: center;
     letter-spacing: 1px;
     /* border: 1px solid pink; */
@@ -587,7 +587,7 @@ Sets the background to NONE on the middle line
     color: var(--contrast-color);
 }
 .skills-card-bottom p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     /* border: 1px solid pink; */
     color: var(--light-font);
     width: 50%;
@@ -595,6 +595,15 @@ Sets the background to NONE on the middle line
     text-align: center;
     font-family: var(--secondary-font);
     letter-spacing: 1px;
+}
+
+@media (min-width: 540px) {
+    .skills-card-bottom h3 {
+        font-size: 1.6rem;
+    }
+    .skills-card-bottom p {
+        font-size: 1.25rem;
+    }
 }
 
 @media (min-width: 800px) {

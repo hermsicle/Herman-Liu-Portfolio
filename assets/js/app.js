@@ -86,15 +86,15 @@ let currentScrollPos = window.pageYOffset;
 }
 
 
-window.addEventListener('scroll' , (e) => {
-    const sections = document.getElementsByClassName('container')
+// window.addEventListener('scroll' , (e) => {
+//     const sections = document.getElementsByClassName('container')
 
-    for(let i = 0; i < sections.length; i++) {
-        console.log(sections[i].id)
+//     for(let i = 0; i < sections.length; i++) {
+//         // console.log(sections[i].id)
 
-    }
-    // console.log(window.location.href)
-})
+//     }
+//     // console.log(window.location.href)
+// })
 
 //query selector of all nav links
 //forEach() add event listener  'click',
