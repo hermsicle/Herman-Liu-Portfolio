@@ -95,3 +95,8 @@ window.addEventListener('scroll' , (e) => {
     }
     // console.log(window.location.href)
 })
+
+//query selector of all nav links
+//forEach() add event listener  'click',
+//e.preventDefault
+//This is to remove the default behavior of showing it in the URL
