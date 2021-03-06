@@ -13,11 +13,11 @@
 <body>
     
     <header class='header'>
-        <a href="#"><img src="./assets/images/my_logo_2.png" alt="img"></a>
+        <a id='logo' ><img src="./assets/images/my_logo_2.png" alt="img"></a>
         <div class="mainNav">
             <ul>
                 <li>
-                    <a class='cool-link' href="#home"> Home </a>
+                    <a class='cool-link' id='home'> Home </a>
                 </li>
                 <li>
                     <a class='cool-link' href="#about"> About </a>
@@ -98,30 +98,35 @@
             <h3>About Me</h3>
 
             <div class="info-container">
-                <p>Hello! I’m Herman, a web developer based in San Francisco, CA. </p>
-                <p>
-                    I enjoy creating web applications, whether it be simple or complex. 
-                    I also enjoy challenging myself as it forces me to push harder to achieve what I want. 
-                    My goal is to always build products that provide excellent user experiences.
+                <p>Hello! I’m Herman, a web developer based in 
+                    <span>San Francisco, CA</span>. 
+                    Some of my hobbies include cooking, 
+                    exercising, hiking, learning, reading, and traveling. 
                 </p>
                 <p>
-                    Shortly after graduating from <span>UC Berkeleys'</span> coding bootcamp, 
-                    I joined a group called <span>HackerRoom</span> 
-                    where I devote 8 hours a week coding and collaborating with the other team members.  
+                    <!-- Some of my hobbies include cooking, 
+                    exercising, hiking, learning, and traveling.  -->
                 </p>
-                <!-- <p>Here’s a list of a few technologies I’ve been working with:  </p> -->
+                <p>
+                    <!-- I am currently looking for new opportunities in the tech field.  -->
+                </p>
+                <p>
+                    After completing <span>UC Berkeley's</span> coding bootcamp, 
+                    I joined an online group called <span>HackerRoom</span> 
+                    with my fellow cohorts.
+                </p>
+                <p>
+                    Throughout my journey of programming, 
+                    I have learned many new technologies and 
+                    am very eager to put them in use in the current job market. 
+                    I am looking forward to getting professional work experience, 
+                    so please message me if you would like to offer me that opportunity!
+                </p>
             </div>
-
-            <!-- <ul class='skills-list'>
-                <li><i class="fas fa-caret-right"></i> Javascript (ES6+)</li>
-                <li><i class="fas fa-caret-right"></i> React</li>
-                <li><i class="fas fa-caret-right"></i> Node.js</li>
-                <li><i class="fas fa-caret-right"></i> HTML & CSS</li>
-            </ul> -->
 
             <div class="img-container">
                 <div class="box">
-                    <div class="speech-bubble">Click <i class="far fa-hand-point-down"></i></div>
+                    <div class="speech-bubble">Click To Change <i class="far fa-hand-point-down"></i></div>
                 </div>
                 <img class='image' src='./assets/images/image.JPG' alt='image'>
             </div>
@@ -324,8 +329,68 @@
     <div class="contact-container container" id='contact'>
         <div class="contact-container-inner">
             <h1>Get In Touch</h1>
-            <p>I am currently looking for new opportunities. Please don't hesitate to send me a message!</p>
-            <a href="mailto:hermanliu95@gmail.com">Send Message</a>
+
+            <form class="contact-form" id='contact-form'>
+                <p>Feel Free To Leave Me A Message 😄</p>
+                <label for="name">
+                    Your Full Name
+                    <span>*</span>
+                </label>
+                <input 
+                    type="text" 
+                    name='name' 
+                    id='name'
+                    required
+                />
+                <label for="email">
+                    Your Email
+                    <span>*</span>
+                </label>
+                <input 
+                    type="email" 
+                    name='email' 
+                    id='email'
+                    required
+                />
+                <label for="name">
+                    Your Subject
+                    <span>*</span>
+                </label>
+                <input 
+                    type="text" 
+                    name='subject' 
+                    id='subject'
+                    required
+                />
+                <label for="name">
+                    Your Message
+                    <span>*</span>
+                </label>
+                <textarea 
+                    cols="30" 
+                    rows="10" 
+                    name='message' 
+                    id='message'
+                    required
+                ></textarea>
+                <input 
+                    class='submit-btn'
+                    type='submit' 
+                    value='Send Message' 
+                />
+            </form>
+
+            <div class="success-message" id='success-message'>
+                <div class="check">
+                    <i class="far fa-check-circle"></i>
+                </div>
+                
+                <div class="message-container">
+                    <p>Your message successfully sent!</p>
+                    <i id='close-message' class="far fa-times-circle"></i>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -367,10 +432,17 @@
 
     <div class="credit">
         <p class='designed'>Designed and Built by Herman Liu</p>
-        <p class='inspiration'>Inspired By Brittany Chiang</p>
+        <p class='inspiration'>Inspiration From Brittany Chiang</p>
     </div>
 
 
     <script src='./assets/js/app.js'></script>
+    <!-- Email Js  -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_FSWwId9w8gNQJml5CKO0B");
+        })();
+    </script>
 </body>
 </html>

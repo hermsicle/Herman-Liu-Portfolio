@@ -44,15 +44,15 @@ header a {
 header img {
     height: 100%;
     width: 200px;
-    transform: scale(1);
+    /* transform: scale(1); */
     transition: 0.35s ease-in-out;
     margin-right: 1rem;
     margin-left: 0.5rem;
     padding: 0.5rem;
 }
-header img:hover {
+/* header img:hover {
     transform: scale(1.05);
-}
+} */
 
 @media (max-width: 375px) {
     header img {
@@ -82,17 +82,7 @@ header img:hover {
     display: flex;
     flex-direction: row-reverse;
 }
-/* Top and bottom line of menu btn, currrently positioned with center line */
-/* .menu-btn_burger::before, 
-.menu-btn_burger::after {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 3px;
-    background: var(--contrast-color);
-    border-radius: 2px;
-    transition: all .5s ease-in-out;
-} */
+
 .menu-btn_burger::before {
     content: '';
     position: absolute;
@@ -119,23 +109,6 @@ header img:hover {
 .menu-btn_burger::after {
     transform: translateY(10px);
 }
-
-/* ANIMATION */
-/* 
-Horizontal Menu -50px 
-Sets the background to NONE on the middle line
-*/
-/* .menu-btn.open .menu-btn_burger {
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-.menu-btn.open .menu-btn_burger::before {
-    transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn_burger::after {
-    transform: rotate(-45deg) translate(35px, 35px);
-} */
 
 /* SideNav x Button */
 .x-btn {
@@ -207,19 +180,31 @@ Sets the background to NONE on the middle line
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
+    /* border: 1px solid pink; */
+    width: 100%;
 }
 .sidenav-inner ul li {
-    text-align: left;
+    /* border: 1px solid pink; */
+    text-align: center;
 }
 .sidenav-inner a:hover {
     color: var(--contrast-color);
 }
-.sidenav-inner a span {
+.sidenav-inner a {
+    /* border: 1px solid green; */
     padding: 1rem;
+    width: 100%;
 }
 .sidenav-inner a span i {
     height: 25px;
     width: 25px;
+    margin-right: 0.5rem;
+}
+
+@media (min-width: 450px) {
+    .sidenav-inner ul li a {
+        font-size: 1.5rem;
+    }
 }
 
 /* Navigation larger screens */
@@ -340,7 +325,16 @@ Sets the background to NONE on the middle line
     background-color: rgba(109,224,192, 0.15);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
+    .hero-container-inner {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-container-inner {
+        padding-top: 10rem;
+    }
 }
 
 @media (min-width: 600px) {
@@ -413,7 +407,7 @@ Sets the background to NONE on the middle line
     transition: transform 0.35s ease-in-out;
 }
 .img-container:hover {
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
 }
 .image {
     width: 100%;
@@ -424,6 +418,7 @@ Sets the background to NONE on the middle line
     transform: translateX(-15px);
     top: -15px;
     filter: grayscale(100%);
+    cursor: pointer;
 }
 .image:hover {
     filter: initial;
@@ -437,7 +432,8 @@ Sets the background to NONE on the middle line
     padding: 15px;
     text-align: center;
     font-weight: 900;
-    color: var(--light-font);
+    /* color: var(--light-font); */
+    color: var(--contrast-color);
     position: absolute;
     top: -150px;
     left: 120px;
@@ -504,7 +500,7 @@ Sets the background to NONE on the middle line
     }
     .img-container {
         grid-area: image;
-        top: -90px;
+        top: -50px;
     }
 }
 
@@ -651,22 +647,6 @@ Sets the background to NONE on the middle line
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .projects-container {
     padding: 2em;
 }
@@ -799,9 +779,10 @@ Sets the background to NONE on the middle line
     flex-direction: column;
     max-width: 1200px;
     margin: 3rem auto;
+    /* border: 2px solid pink; */
 }
 .contact-container-inner h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--secondary-color);
     text-align: center;
     margin: 0;
@@ -814,8 +795,52 @@ Sets the background to NONE on the middle line
     margin: 2rem;
     letter-spacing: 2px;
 }
-.contact-container-inner a {
-    padding: 20px 15px;
+
+/* Contact Form */
+.contact-form {
+    /* border: 2px solid var(--secondary-color); */
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* border-radius: 0.5rem; */
+    padding: 1rem;
+    background: var(--project-bg);
+    box-shadow: var(--box-shadow);
+}
+.contact-form p {
+    font-size: 1.15rem;
+    color: var(--contrast-color);
+    /* border: 1px solid pink; */
+    width: 100%;
+    margin: 1rem auto;
+}
+.contact-form label {
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    font-size: 1.05rem;
+    padding: 0.5rem;
+}
+.contact-form label span {
+    color: var(--contrast-color);
+}
+.contact-form input,
+.contact-form textarea  {
+    background: rgba(0, 0, 0, 0.55);
+    /* border: 2px solid green; */
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: var(--light-font);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    /* outline: none; */
+}
+.contact-form input {
+    margin-bottom: 1rem;
+}
+
+.contact-form .submit-btn {
+    padding: 15px 15px;
     background: none;
     border: 1px solid var(--contrast-color);
     color: var(--contrast-color);
@@ -831,9 +856,56 @@ Sets the background to NONE on the middle line
     text-align: center;
     font-family: var(--secondary-font);
 }
-.contact-container-inner a:hover {
+.contact-form .submit-btn:hover {
     background-color: rgba(109,224,192, 0.15);
 }
+
+/* Successful message  */
+.success-message {
+    border: 1px solid var(--contrast-color);
+    display: none;
+    border-radius: 0.5rem;
+}
+.success-message.active {
+    display: flex;
+}
+.success-message .check {
+    /* border: 2px solid white; */
+    width: 10%;
+    align-self: center;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--contrast-color);
+}
+.success-message .check i {
+    transform: scale(1);
+    transition: 350ms ease-in-out;
+    margin-left: 1rem;
+}
+.success-message .check i:hover {
+    transform: scale(1.1);
+}
+.message-container {
+    /* border: 2px solid black; */
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.message-container p {
+    font-weight: 900;
+    margin: 0 0 0 1rem;
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+}
+.message-container i {
+    font-size: 1.75rem;
+    /* color: var(--contrast-color); */
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
 @media (min-width: 630px) {
     .contact-container-inner {
         max-width: 630px;
@@ -841,10 +913,21 @@ Sets the background to NONE on the middle line
     .contact-container-inner h1 {
         font-size: 2.5rem;
     }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+    }
 }
 @media (min-width: 965px) {
     .contact-container-inner h1 {
         font-size: 3rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1.05rem;
+    }
+    .contact-form .submit-btn {
+        padding: 20px;
     }
 }
 

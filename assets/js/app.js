@@ -6,6 +6,47 @@ let menuOpen = false
 let img = document.querySelector('.image')
 let imgPosition = 0;
 
+const successMessage = document.getElementById('success-message')
+const closeMessage = document.getElementById('close-message')
+
+const logo = document.getElementById('logo')
+logo.addEventListener('click', () => {
+    window.scrollTo(0, 0)
+})
+
+const home = document.getElementById('home')
+home.addEventListener('click', () => {
+    window.scrollTo(0, 0)
+})
+
+
+closeMessage.addEventListener('click' , () => {
+    successMessage.classList.toggle('active')
+})
+
+
+const form = document.getElementById('contact-form')
+
+form.addEventListener('submit' , (event) => {
+    event.preventDefault();
+    submitForm();
+})
+
+function submitForm() {
+    emailjs.sendForm('Gmail', 'template_9nc8wgs', form)
+        .then(function(res) {
+            console.log('success', res.status)
+            successMessage.classList.toggle('active')
+            document.getElementById('name').value = ''
+            document.getElementById('email').value = ''
+            document.getElementById('subject').value = ''
+            document.getElementById('message').value = ''
+        }), function(error) {
+            console.log('Failed..', error)
+        }
+}
+
+
 img.addEventListener('click' , () => {
     imgPosition++
     switch(imgPosition) {
@@ -86,17 +127,3 @@ let currentScrollPos = window.pageYOffset;
 }
 
 
-// window.addEventListener('scroll' , (e) => {
-//     const sections = document.getElementsByClassName('container')
-
-//     for(let i = 0; i < sections.length; i++) {
-//         // console.log(sections[i].id)
-
-//     }
-//     // console.log(window.location.href)
-// })
-
-//query selector of all nav links
-//forEach() add event listener  'click',
-//e.preventDefault
-//This is to remove the default behavior of showing it in the URL
