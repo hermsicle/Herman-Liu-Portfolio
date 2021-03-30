@@ -42,17 +42,10 @@ header {
 header a {
     align-self: center;
 }
-/* header img {
-    height: 100%;
-    width: 200px;
-    transition: 0.35s ease-in-out;
-    margin-right: 1rem;
-    margin-left: 0.5rem;
-    padding: 0.5rem;
-} */
+
 header img {
     height: 70px;
-    width: 150px;
+    width: 250px;
     cursor: pointer;
 }
 
@@ -61,7 +54,7 @@ header img {
     header img {
         margin: 0;
         height: 80%;
-        width: 180px;
+        width: 200px;
     }
 }
 .menu-btn {
