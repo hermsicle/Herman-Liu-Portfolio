@@ -47,29 +47,29 @@ function submitForm() {
 }
 
 
-img.addEventListener('click' , () => {
-    imgPosition++
-    switch(imgPosition) {
-        case 1: 
-            img.src = './assets/images/image2.JPG'
-            break
-        case 2: 
-            img.src = './assets/images/image3.JPG'
-            break
-        case 3:
-            img.src = './assets/images/image4.JPG'
-            break
-        case 4:
-            img.src = './assets/images/image5.JPG'
-            break
-        case 5: 
-            img.src = './assets/images/image.JPG'
-            break
-    }
-    if(imgPosition === 5) {
-        imgPosition = 0;
-    }
-})
+// img.addEventListener('click' , () => {
+//     imgPosition++
+//     switch(imgPosition) {
+//         case 1: 
+//             img.src = './assets/images/image2.JPG'
+//             break
+//         case 2: 
+//             img.src = './assets/images/image3.JPG'
+//             break
+//         case 3:
+//             img.src = './assets/images/image4.JPG'
+//             break
+//         case 4:
+//             img.src = './assets/images/image5.JPG'
+//             break
+//         case 5: 
+//             img.src = './assets/images/image.JPG'
+//             break
+//     }
+//     if(imgPosition === 5) {
+//         imgPosition = 0;
+//     }
+// })
 
 /*
 Grab all the containers from DOM 
