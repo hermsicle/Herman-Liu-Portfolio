@@ -45,18 +45,18 @@ header a {
 
 header img {
     height: 70px;
-    width: 250px;
+    width: 280px;
     cursor: pointer;
 }
 
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     header img {
         margin: 0;
         height: 80%;
-        width: 200px;
+        width: 250px;
     }
-}
+} */
 .menu-btn {
     position: relative;
     display: flex;
@@ -463,7 +463,7 @@ header img {
 }
 .skills-card {
     /* border: 2px solid pink; */
-    height: 200px;
+    height: 250px;
     width: 100%;
     margin: 1rem auto;
     display: flex;
@@ -596,6 +596,13 @@ header img {
     .project-card {
         width: 300px;
     }
+    .project-tech-stack,
+    .project-card-title,
+    .project-card-content
+    {
+        padding: 0px 1rem;
+    }
+
 }
 
 .project-card-img {
